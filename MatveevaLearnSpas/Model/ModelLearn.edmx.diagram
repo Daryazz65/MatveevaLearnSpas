@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="135f51a0962e43a0af413b5535ead5e5" Name="Diagram1">
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.ControlQuestion" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.DopMaterial" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.Post" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.Role" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.Section" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.Testing" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatveevaLearnSpasModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="MatveevaLearnSpasModel.FK_ControlQuestion_Section" ManuallyRouted="false" />
+        <AssociationConnector Association="MatveevaLearnSpasModel.FK_User_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="MatveevaLearnSpasModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="MatveevaLearnSpasModel.FK_Testing_Section" ManuallyRouted="false" />
+        <AssociationConnector Association="MatveevaLearnSpasModel.FK_Testing_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
