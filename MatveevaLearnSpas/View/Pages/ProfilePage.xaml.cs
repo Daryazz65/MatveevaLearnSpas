@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatveevaLearnSpas.View.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,6 @@ namespace MatveevaLearnSpas.View.Pages
         public ProfilePage()
         {
             InitializeComponent();
-        }
-
-        private void GoOutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

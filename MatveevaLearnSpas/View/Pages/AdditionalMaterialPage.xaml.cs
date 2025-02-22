@@ -27,7 +27,7 @@ namespace MatveevaLearnSpas.View.Pages
 
         private void BylvarBtn_Click(object sender, RoutedEventArgs e)
         {
-            //--
+
         }
 
         private void MkadBtn_Click(object sender, RoutedEventArgs e)

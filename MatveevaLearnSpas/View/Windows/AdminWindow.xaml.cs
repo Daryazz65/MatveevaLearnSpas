@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MatveevaLearnSpas.AppData;
+using MatveevaLearnSpas.View.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,16 @@ namespace MatveevaLearnSpas.View.Windows
         public AdminWindow()
         {
             InitializeComponent();
+            AdminAddPage adminAddPage = new AdminAddPage();
+            AdminFrame.Navigate(adminAddPage);
+            FrameHelper.selectedFrame = AdminFrame;
+        }
+
+        private void GoOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AuthorisationWindow authorisationWindow = new AuthorisationWindow();
+            authorisationWindow.Show();
+            Close();
         }
     }
 }

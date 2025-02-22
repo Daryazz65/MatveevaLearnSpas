@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MatveevaLearnSpas.AppData;
+using MatveevaLearnSpas.View.Pages;
+using MatveevaLearnSpas.View.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,21 +26,34 @@ namespace MatveevaLearnSpas
         public MainWindow()
         {
             InitializeComponent();
+            TestingPage testingPage = new TestingPage();
+            MainFrame.Navigate(testingPage);
+            FrameHelper.selectedFrame = MainFrame;
         }
 
-        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        private void TestingBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            TestingPage testingPage = new TestingPage();
+            MainFrame.Navigate(testingPage);
         }
 
-        private void Hyperlink_Click_1(object sender, RoutedEventArgs e)
+        private void MaterialBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AdditionalMaterialPage additionalMaterialPage = new AdditionalMaterialPage();
+            MainFrame.Navigate(additionalMaterialPage);
         }
 
-        private void Hyperlink_Click_2(object sender, RoutedEventArgs e)
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
         {
+            ProfilePage profilePage = new ProfilePage();
+            MainFrame.Navigate(profilePage);
+        }
 
+        private void GoOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AuthorisationWindow authorisationWindow = new AuthorisationWindow();
+            authorisationWindow.Show();
+            Close();
         }
     }
 }

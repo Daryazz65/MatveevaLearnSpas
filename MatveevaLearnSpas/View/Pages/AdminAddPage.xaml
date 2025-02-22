@@ -1,0 +1,134 @@
+﻿<Page x:Class="MatveevaLearnSpas.View.Pages.AdminAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MatveevaLearnSpas.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Добавление информации">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"
+               Text="Добавление/ изменение/ редактирование информации о пользователях."/>
+        <DataGrid Foreground="Azure" x:Name="UserDG" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
+                  Grid.Row="1" ColumnWidth="*" Margin="5" IsSynchronizedWithCurrentItem="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="FullName" Binding="{Binding FullName}"/>
+                <DataGridTextColumn Header="IdRole" Binding="{Binding Role.Name}"/>
+                <DataGridTextColumn Header="IdPost" Binding="{Binding Post.Name}"/>
+                <DataGridTextColumn Header="Photo" Binding="{Binding Photo}"/>
+                <DataGridTextColumn Header="DateRegistration" Binding="{Binding DateRegistration}"/>
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}"/>
+                <DataGridTemplateColumn Header="Изменить">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="EditBtn" Click="EditBtn_Click">
+                                <TextBlock Text="У" FontSize="10"/>
+                            </Button> 
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Удалить">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Name="DeleteBtn" Click="DeleteBtn_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Margin="5" BorderThickness="1" BorderBrush="Black">
+                <StackPanel  Margin="5">
+                    <TextBlock Text="Добавить пользователя" FontWeight="Bold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" Margin="5"/>
+                    <Grid Name="NewUserGrid" Height="310">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Margin="5" Text="Полное имя" HorizontalAlignment="Left"/>
+                        <TextBox Margin="5" Grid.Column="1" FontSize="12" Height="27" Text="{Binding User.FullName}"/>
+                        <TextBlock Margin="5" Grid.Row="1" Text="Роль" HorizontalAlignment="Left" />
+                        <TextBox Margin="5" Grid.Row="1" Height="27" FontSize="12" Grid.Column="1" Text="{Binding Description}"/>
+                        <TextBlock Margin="5" Grid.Row="2" Text="Должность" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Margin="5" Grid.Row="2" Height="27" Grid.Column="1" Text="{Binding Price}"/>
+                        <TextBlock Margin="5" Grid.Row="3" Text="Фотография" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Margin="5" Grid.Row="3" Height="27" Grid.Column="1" Text="{Binding User.Photo}"/>
+                        <TextBlock Margin="5" Grid.Row="4" Text="Дата регистрации" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Margin="5" Grid.Row="4" Height="27" Grid.Column="1" Text="{Binding Unit}"/>
+                        <TextBlock Margin="5" Grid.Row="5" Text="Логин" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Margin="5" Grid.Row="5" Height="27" Grid.Column="1" Text="{Binding User.Login}"/>
+                        <TextBlock Margin="5" Grid.Row="6" Text="Пароль" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Margin="5" Grid.Row="6" Height="27" Grid.Column="1" Text="{Binding User.Password}"/>
+                        <Button Grid.Row="7" Grid.ColumnSpan="2" Width="150" Content="Добавить" Margin="5"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Name="AddUserBtn" Click="AddUserBtn_Click"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" Margin="5" BorderThickness="1" BorderBrush="Black">
+                <StackPanel  Margin="5">
+                    <TextBlock Text="Изменить информацию" FontWeight="Bold"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" Margin="5"/>
+                    <Grid Name="EditUserGrid" Height="310">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Margin="5" Text="Полное имя" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Margin="5" Height="27" Grid.Column="1" Text="{Binding User.FullName}"/>
+                        <TextBlock Margin="5" Grid.Row="1" Text="Роль" HorizontalAlignment="Left" />
+                        <TextBox FontSize="12" Margin="5" Grid.Row="1" Height="27" Grid.Column="1" Text="{Binding Description}"/>
+                        <TextBlock Grid.Row="2" Margin="5" Text="Должность" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Grid.Row="2" Height="27" Margin="5" Grid.Column="1" Text="{Binding Price}"/>
+                        <TextBlock Grid.Row="3" Text="Фотография" Margin="5" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Grid.Row="3" Height="27" Grid.Column="1" Margin="5" Text="{Binding User.Photo}"/>
+                        <TextBlock Margin="5" Grid.Row="4" Text="Дата регистрации" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Grid.Row="4" Margin="5" Height="27" Grid.Column="1" Text="{Binding Unit}"/>
+                        <TextBlock Grid.Row="5" Text="Логин" Margin="5" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Grid.Row="5" Height="27" Margin="5" Grid.Column="1" Text="{Binding User.Login}"/>
+                        <TextBlock Grid.Row="6" Text="Пароль" Margin="5" HorizontalAlignment="Left"/>
+                        <TextBox FontSize="12" Grid.Row="6" Height="27" Grid.Column="1" Margin="5" Text="{Binding User.Password}"/>
+                        <Button Grid.Row="7" Grid.ColumnSpan="2" Width="150"  Content="Изменить" Margin="5"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Name="EditUserBtn" Click="EditUserBtn_Click"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

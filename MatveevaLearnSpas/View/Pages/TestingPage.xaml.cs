@@ -16,13 +16,15 @@ using System.Windows.Shapes;
 namespace MatveevaLearnSpas.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для OrdersPage.xaml
+    /// Логика взаимодействия для TestingPage.xaml
     /// </summary>
-    public partial class OrdersPage : Page
+    public partial class TestingPage : Page
     {
-        public OrdersPage()
+
+        public TestingPage()
         {
             InitializeComponent();
+            ModulTwoBtn.Visibility = Visibility.Collapsed;
         }
 
         private void ModulTwoBtn_Click(object sender, RoutedEventArgs e)

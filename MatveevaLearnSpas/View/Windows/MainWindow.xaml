@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatveevaLearnSpas"
        mc:Ignorable="d"
-       Title="Главное окно" Height="450" Width="700" 
+       Title="Главное окно сотрудника" Height="450" Width="700" 
        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
-       <!--Title="Главное окно" Height="450" Width="800" Background="#131F24">-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
@@ -16,18 +15,21 @@
         <StackPanel Background="#293B43">
             <Image Name="LogoImg" Grid.RowSpan="2" Source="/Resources/Icons/Logo.png" 
                    HorizontalAlignment="Left" Height="70"/>
-            <Border Height="60"/>
-            <TextBlock FontSize="20" Margin="50 0 0 0" HorizontalAlignment="Left">
-                <Hyperlink Foreground="White" Click="Hyperlink_Click">Тестирование</Hyperlink>
-            </TextBlock>
-            <Border Height="20"/>
-            <TextBlock FontSize="20" Margin="50 0 0 0" HorizontalAlignment="Left">
-                <Hyperlink Foreground="White" Click="Hyperlink_Click_1">Доп. материал</Hyperlink>
-            </TextBlock>
-            <Border Height="20"/>
-            <TextBlock FontSize="20" Margin="50 0 0 0" HorizontalAlignment="Left">
-                <Hyperlink Foreground="White"  Click="Hyperlink_Click_2">Профиль</Hyperlink>
-            </TextBlock>
+            <Border Height="50"/>
+            <Button HorizontalAlignment="Left" Margin="40 0 0 0" Width="140" Height="26" x:Name="TestingBtn" Click="TestingBtn_Click" Background="Transparent" BorderBrush="Transparent">
+                <TextBlock Text="Тестирование"/>
+            </Button>
+            <Border Height="17"/>
+            <Button HorizontalAlignment="Left" Margin="39 0 0 0" Width="150" Height="26" x:Name="MaterialBtn" Click="MaterialBtn_Click"  Background="Transparent" BorderBrush="Transparent">
+                <TextBlock Text="Доп. материал"/>
+            </Button>
+            <Border Height="18"/>
+            <Button HorizontalAlignment="Left" Margin="33 0 0 0"  Width="110" Height="26" x:Name="ProfileBtn" Click="ProfileBtn_Click"  Background="Transparent" BorderBrush="Transparent">
+                <TextBlock Text="Профиль"/>
+            </Button>
+            <Border Height="120"/>
+            <Button Content="Выйти  из аккаунта" Margin="10" 
+                    Height="35" Name="GoOutBtn" Click="GoOutBtn_Click"/>
         </StackPanel>
         <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -40,6 +42,6 @@
             <Border Height="60"/>
             <Image Source="/Resources/Icons/Profil.png" Height="30" Margin="1 0 0 -25"/>
         </Grid>
-        <Frame Name="MainFrm" Grid.Column="1"/>
+        <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

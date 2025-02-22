@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MatveevaLearnSpas.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="480"
-      Title="AdditionalMaterialPage">
+      Title="Дополнительный материал">
 
         <Grid Grid.Column="1" Grid.RowSpan="2">
             <Grid.RowDefinitions>
