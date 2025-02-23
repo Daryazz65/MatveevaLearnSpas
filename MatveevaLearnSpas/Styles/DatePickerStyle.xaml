@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style TargetType="DataGridColumnHeader">
-        <Setter Property="Background" Value="#026DD0" />
+    <Style TargetType="DatePicker">
+        <Setter Property="Background" Value="#131F24" />
     </Style>
-    <Style TargetType="DataGridCell">
+    <Style TargetType="DatePickerTextBox">
         <Setter Property="Background" Value="#131F24" />
     </Style>
 </ResourceDictionary>
