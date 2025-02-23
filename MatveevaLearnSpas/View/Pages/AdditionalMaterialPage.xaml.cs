@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatveevaLearnSpas.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,16 +24,21 @@ namespace MatveevaLearnSpas.View.Pages
         public AdditionalMaterialPage()
         {
             InitializeComponent();
+            BylvarnoePage bylvarnoePage = new BylvarnoePage();
+            AdditionalFrame.Navigate(bylvarnoePage);
+            FrameHelper.selectedFrame = AdditionalFrame;
         }
 
         private void BylvarBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            BylvarnoePage bylvarnoePage = new BylvarnoePage();
+            AdditionalFrame.Navigate(bylvarnoePage);
         }
 
         private void MkadBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MkadPage mkadPage = new MkadPage();
+            AdditionalFrame.Navigate(mkadPage);
         }
     }
 }

@@ -12,23 +12,19 @@
             <ColumnDefinition Width="300" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="150" />
-        </Grid.RowDefinitions>
         <TextBlock Text="Матвеева Кристина" HorizontalAlignment="Left" 
-                       VerticalAlignment="Top" Margin="10" FontSize="25"
+                       VerticalAlignment="Top" Margin="10 50 0 0" FontSize="25"
                        Foreground="Yellow"/>
         <TextBlock Text="Регистрация: " HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="10 60 0 0"/>
+                       VerticalAlignment="Top" Margin="10 90 0 0"/>
         <TextBlock Text="12.03.2024" HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="140 60 0 0"
+                       VerticalAlignment="Top" Margin="140 90 0 0"
                        Foreground="Yellow"/>
         <TextBlock Text="Специалист по приему и обработке экстренных вызовов"
                        TextWrapping="Wrap" Foreground="Yellow"
-                       Margin="10 0 0 0"/>
+                       Margin="10 -80 0 0"/>
         <Image Source="/Resources/Images/kristinka.png" 
-                   Grid.Column="1" Margin="10 0 10 66"
+                   Grid.Column="1" Margin="10 -90 10 66"
                    Name="UserImage"/>
     </Grid>
 </Page>
