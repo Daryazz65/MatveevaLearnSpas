@@ -1,4 +1,5 @@
-﻿using MatveevaLearnSpas.View.Windows;
+﻿using MatveevaLearnSpas.Model;
+using MatveevaLearnSpas.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,11 @@ namespace MatveevaLearnSpas.View.Pages
     /// </summary>
     public partial class ProfilePage : Page
     {
+        private static MatveevaLearnSpasEntities _context = App.GetContext();
         public ProfilePage()
         {
             InitializeComponent();
+
         }
     }
 }
