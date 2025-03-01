@@ -16,7 +16,8 @@
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"
                Text="Добавление/ изменение/ редактирование информации о пользователях."/>
         <DataGrid Foreground="Azure" x:Name="UserDG" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
-                  Grid.Row="1" ColumnWidth="*" Margin="5" IsSynchronizedWithCurrentItem="True" >
+                  Grid.Row="1" ColumnWidth="*" Margin="5" IsSynchronizedWithCurrentItem="True" 
+                  SelectionChanged="UserDG_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="FullName" Binding="{Binding FullName}"/>
@@ -112,7 +113,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Margin="5" Text="Полное имя" HorizontalAlignment="Left"/>
-                        <TextBox FontSize="12" Margin="5" Height="27" Grid.Column="1" Text="{Binding User.FullName}"/>
+                        <TextBox Name="txtFullName" FontSize="12" Margin="5" Height="27" Grid.Column="1" Text="{Binding User.FullName}"/>
                         <TextBlock Margin="5" Grid.Row="1" Text="Роль" HorizontalAlignment="Left" />
                         <ComboBox Margin="5" Grid.Row="1" Height="27" FontSize="12" Grid.Column="1" Name="EditRoleCmb"/>
                         <TextBlock Grid.Row="2" Margin="5" Text="Должность" HorizontalAlignment="Left"/>
@@ -122,9 +123,9 @@
                         <TextBlock Margin="5" Grid.Row="4" Text="Дата регистрации" HorizontalAlignment="Left"/>
                         <DatePicker FontSize="12" Margin="5" Grid.Row="4" Height="27" Grid.Column="1" Name="EditDateRegistrDp"/>
                         <TextBlock Grid.Row="5" Text="Логин" Margin="5" HorizontalAlignment="Left"/>
-                        <TextBox FontSize="12" Grid.Row="5" Height="27" Margin="5" Grid.Column="1" Text="{Binding User.Login}"/>
+                        <TextBox Name="txtLogin" FontSize="12" Grid.Row="5" Height="27" Margin="5" Grid.Column="1" Text="{Binding User.Login}"/>
                         <TextBlock Grid.Row="6" Text="Пароль" Margin="5" HorizontalAlignment="Left"/>
-                        <TextBox FontSize="12" Grid.Row="6" Height="27" Grid.Column="1" Margin="5" Text="{Binding User.Password}"/>
+                        <TextBox Name="txtPassword" FontSize="12" Grid.Row="6" Height="27" Grid.Column="1" Margin="5" Text="{Binding User.Password}"/>
                         <Button Grid.Row="7" Grid.ColumnSpan="2" Width="150"  Content="Изменить" Margin="5"
                             HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Name="EditUserBtn" Click="EditUserBtn_Click"/>
