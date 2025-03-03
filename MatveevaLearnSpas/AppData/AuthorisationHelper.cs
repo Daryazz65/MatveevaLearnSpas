@@ -18,11 +18,9 @@ namespace MatveevaLearnSpas.AppData
         /// <param name="login"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-
         public static bool Authorise(string login, string password)
         {
             List<User> users = _context.Users.ToList();
-
             if (login == string.Empty || password == string.Empty)
             {
                 MessageBoxHelper.Error("Не все поля для ввода были заполнены.");
