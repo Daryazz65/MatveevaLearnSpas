@@ -45,18 +45,10 @@ namespace MatveevaLearnSpas.View.Pages
             AddPostCmb.DisplayMemberPath = "Name";
             EditPostCmb.DisplayMemberPath = "Name";
         }
-
         private void GetUsers()
         {
             UserDG.ItemsSource = _context.Users.ToList();
-
         }
-
-        private void EditBtn_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void AddUserBtn_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(AddNameTbl.Text) && !string.IsNullOrEmpty(AddLoginBtn.Text) 
@@ -82,7 +74,6 @@ namespace MatveevaLearnSpas.View.Pages
                 MessageBoxHelper.Error("Не все данные были введены!");
             }
         }
-
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             var productToDelete = (sender as FrameworkElement).DataContext as User;
@@ -90,7 +81,6 @@ namespace MatveevaLearnSpas.View.Pages
             _context.SaveChanges();
             GetUsers();
         }
-
         private void EditUserBtn_Click(object sender, RoutedEventArgs e)
         {
             if (_selectedUserId == 0)
@@ -98,30 +88,28 @@ namespace MatveevaLearnSpas.View.Pages
                 MessageBox.Show("Выберите пользователя для редактирования.");
                 return;
             }
-
             string newFullName = txtFullName.Text;
             string newRole = EditRoleCmb.SelectedItem?.ToString();
             string newPost = EditPostCmb.SelectedItem?.ToString();
             string newLogin = txtLogin.Text;
             string newPassword = txtPassword.Text;
             DateTime? newRegDate = EditDateRegistrDp.SelectedDate;
-
+            int newRoleId = (int)EditRoleCmb.SelectedValue;
+            int newPostId = (int)EditPostCmb.SelectedValue;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 string query = "UPDATE [User] SET FullName = @FullName, IdRole = @Role, IdPost = @Post, " +
                     "Login = @Login, Password = @Password, DateRegistration = @RegDate WHERE Id = @Id";
-
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@FullName", newFullName);
-                    cmd.Parameters.AddWithValue("@Role", newRole);
-                    cmd.Parameters.AddWithValue("@Post", newPost);
+                    cmd.Parameters.AddWithValue("@Role", newRoleId);
+                    cmd.Parameters.AddWithValue("@Post", newPostId);
                     cmd.Parameters.AddWithValue("@Login", newLogin);
                     cmd.Parameters.AddWithValue("@Password", newPassword);
                     cmd.Parameters.AddWithValue("@RegDate", newRegDate ?? (object)DBNull.Value);
                     cmd.Parameters.AddWithValue("@Id", _selectedUserId);
-
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
@@ -157,8 +145,6 @@ namespace MatveevaLearnSpas.View.Pages
                 txtLogin.Text = selectedUser.Login;
                 txtPassword.Text = selectedUser.Password;
                 EditDateRegistrDp.SelectedDate = selectedUser.DateRegistration;
-
-                // Сохраняем ID редактируемого пользователя
                 _selectedUserId = selectedUser.Id;
             }
         }

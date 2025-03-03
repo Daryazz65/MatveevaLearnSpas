@@ -115,9 +115,9 @@
                         <TextBlock Margin="5" Text="Полное имя" HorizontalAlignment="Left"/>
                         <TextBox Name="txtFullName" FontSize="12" Margin="5" Height="27" Grid.Column="1" Text="{Binding User.FullName}"/>
                         <TextBlock Margin="5" Grid.Row="1" Text="Роль" HorizontalAlignment="Left" />
-                        <ComboBox Margin="5" Grid.Row="1" Height="27" FontSize="12" Grid.Column="1" Name="EditRoleCmb"/>
+                        <ComboBox Margin="5" Grid.Row="1" Height="27" FontSize="12" Grid.Column="1" Name="EditRoleCmb" DisplayMemberPath="Name" SelectedValuePath="Id"/>
                         <TextBlock Grid.Row="2" Margin="5" Text="Должность" HorizontalAlignment="Left"/>
-                        <ComboBox Margin="5" Grid.Row="2" Height="27" FontSize="12" Grid.Column="1" Name="EditPostCmb"/>
+                        <ComboBox Margin="5" Grid.Row="2" Height="27" FontSize="12" Grid.Column="1" Name="EditPostCmb" DisplayMemberPath="Name" SelectedValuePath="Id"/>
                         <TextBlock Grid.Row="3" Text="Фотография" Margin="5" HorizontalAlignment="Left"/>
                         <TextBox FontSize="12" Grid.Row="3" Height="27" Grid.Column="1" Margin="5" Text="{Binding User.Photo}"/>
                         <TextBlock Margin="5" Grid.Row="4" Text="Дата регистрации" HorizontalAlignment="Left"/>

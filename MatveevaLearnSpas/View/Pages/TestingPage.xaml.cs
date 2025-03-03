@@ -20,7 +20,6 @@ namespace MatveevaLearnSpas.View.Pages
     /// </summary>
     public partial class TestingPage : Page
     {
-
         public TestingPage()
         {
             InitializeComponent();

@@ -28,7 +28,6 @@ namespace MatveevaLearnSpas.View.Windows
             AdminFrame.Navigate(adminAddPage);
             FrameHelper.selectedFrame = AdminFrame;
         }
-
         private void GoOutBtn_Click(object sender, RoutedEventArgs e)
         {
             AuthorisationWindow authorisationWindow = new AuthorisationWindow();

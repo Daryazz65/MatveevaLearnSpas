@@ -26,7 +26,6 @@ namespace MatveevaLearnSpas.View.Windows
         {
             InitializeComponent();
         }
-
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
             AuthorisationHelper.Authorise(LoginTb.Text, PasswordTb.Password);
@@ -43,7 +42,6 @@ namespace MatveevaLearnSpas.View.Windows
                 Close();
             }
         }
-
         private void PasswordRecoveryBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxHelper.Information("Обратитесь к системному администратору.");

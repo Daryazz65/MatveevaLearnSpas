@@ -30,19 +30,16 @@ namespace MatveevaLearnSpas
             MainFrame.Navigate(testingPage);
             FrameHelper.selectedFrame = MainFrame;
         }
-
         private void TestingBtn_Click(object sender, RoutedEventArgs e)
         {
             TestingPage testingPage = new TestingPage();
             MainFrame.Navigate(testingPage);
         }
-
         private void MaterialBtn_Click(object sender, RoutedEventArgs e)
         {
             AdditionalMaterialPage additionalMaterialPage = new AdditionalMaterialPage();
             MainFrame.Navigate(additionalMaterialPage);
         }
-
         private void GoOutBtn_Click(object sender, RoutedEventArgs e)
         {
             AuthorisationWindow authorisationWindow = new AuthorisationWindow();

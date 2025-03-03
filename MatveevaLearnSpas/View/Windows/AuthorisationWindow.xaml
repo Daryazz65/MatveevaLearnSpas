@@ -41,4 +41,3 @@
         <Button Name="EnterBtn" Margin="120 0 115 0" Click="EnterBtn_Click" Content="Войти" Grid.Row="5"/>
     </Grid>
 </Window>
-    
