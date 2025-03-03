@@ -37,9 +37,13 @@ namespace MatveevaLearnSpas.View.Pages
             LoadUsers();
             UserDG.ItemsSource = _context.Users.ToList();
             AddRoleCmb.ItemsSource = _context.Roles.ToList();
+            EditRoleCmb.ItemsSource = _context.Roles.ToList();
             AddRoleCmb.DisplayMemberPath = "Name";
+            EditRoleCmb.DisplayMemberPath = "Name";
             AddPostCmb.ItemsSource = _context.Posts.ToList();
+            EditPostCmb.ItemsSource = _context.Posts.ToList();
             AddPostCmb.DisplayMemberPath = "Name";
+            EditPostCmb.DisplayMemberPath = "Name";
         }
 
         private void GetUsers()
@@ -105,8 +109,8 @@ namespace MatveevaLearnSpas.View.Pages
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "UPDATE Users SET FullName = @FullName, Role = @Role, Post = @Post, " +
-                               "Login = @Login, Password = @Password, RegistrationDate = @RegDate WHERE Id = @Id";
+                string query = "UPDATE [User] SET FullName = @FullName, IdRole = @Role, IdPost = @Post, " +
+                    "Login = @Login, Password = @Password, DateRegistration = @RegDate WHERE Id = @Id";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -141,7 +145,6 @@ namespace MatveevaLearnSpas.View.Pages
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 UserDG.ItemsSource = dt.DefaultView;
-                //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             }
         }
         private void UserDG_SelectionChanged(object sender, SelectionChangedEventArgs e)
