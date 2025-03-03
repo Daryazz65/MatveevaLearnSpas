@@ -136,7 +136,7 @@ namespace MatveevaLearnSpas.View.Pages
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Users";
+                string query = "SELECT * FROM [User]";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
