@@ -126,7 +126,7 @@ namespace MatveevaLearnSpas.View.Pages
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Данные обновлены!");
-                        LoadUsers(); // Обновление DataGrid
+                        LoadUsers();
                     }
                     else
                     {
