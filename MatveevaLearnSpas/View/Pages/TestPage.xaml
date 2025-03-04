@@ -17,9 +17,9 @@
                        HorizontalAlignment="Center" Margin="0,20,0,20"/>
 
             <!-- Кнопки с ответами -->
-            <Button x:Name="AnswerButton1" Click="AnswerButton_Click" FontSize="16" Margin="5"/>
-            <Button x:Name="AnswerButton2" Click="AnswerButton_Click" FontSize="16" Margin="5"/>
-            <Button x:Name="AnswerButton3" Click="AnswerButton_Click" FontSize="16" Margin="5"/>
+            <Button x:Name="AnswerBtn1" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
+            <Button x:Name="AnswerBtn2" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
+            <Button x:Name="AnswerBtn3" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
 
             <!-- Кнопка "Далее" -->
             <Button x:Name="NextButton" Content="Далее" Click="NextButton_Click" 
