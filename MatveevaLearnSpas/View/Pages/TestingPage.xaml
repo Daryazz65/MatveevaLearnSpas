@@ -40,9 +40,6 @@
                 </Grid.RowDefinitions>
                 <TextBlock Text="МОДУЛЬ 1" FontSize="20"
                            HorizontalAlignment="Left" Margin="10"/>
-                <TextBlock Grid.Row="1" Text="5 вопросов" FontSize="15"
-                           HorizontalAlignment="Left" Margin="10 -10 0 0"
-                           Foreground="#949DA1"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1" 
@@ -73,9 +70,6 @@
                 </Grid.RowDefinitions>
                 <TextBlock Text="МОДУЛЬ 2" FontSize="20"
                            HorizontalAlignment="Left" Margin="10"/>
-                <TextBlock Grid.Row="1" Text="5 вопросов" FontSize="15"
-                           HorizontalAlignment="Left" Margin="10 -10 0 0"
-                           Foreground="#949DA1"/>
             </Grid>
         </Grid>
     </Grid>

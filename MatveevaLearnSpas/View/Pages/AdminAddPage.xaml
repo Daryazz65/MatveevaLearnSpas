@@ -30,7 +30,7 @@
                 <DataGridTemplateColumn Header="Изменить">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="EditBtn" Click="EditBtn_Click">
+                            <Button Name="EditBtn">
                                 <TextBlock Text="Изменить" FontSize="13"/>
                             </Button> 
                         </DataTemplate>
