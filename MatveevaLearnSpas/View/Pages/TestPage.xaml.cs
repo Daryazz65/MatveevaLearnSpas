@@ -1,6 +1,7 @@
 ﻿using MatveevaLearnSpas.AppData;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,11 +23,10 @@ namespace MatveevaLearnSpas.View.Pages
     /// </summary>
     public partial class TestPage : Page
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
         private List<Question> questions;
         private int currentQuestionIndex = 0;
         private int score = 0;
-
-
 
         public TestPage(int moduleId)
         {
@@ -35,41 +35,39 @@ namespace MatveevaLearnSpas.View.Pages
             ShowQuestion();
         }
 
-
-
         private List<Question> LoadQuestions(int moduleId)
         {
             List<Question> questions = new List<Question>();
             string query = "SELECT Id, Question, CorrectAnswer, InCorrectAnswer, InCorrectAnswer2 FROM ControlQuestion WHERE IdSection = @moduleId";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@moduleId", moduleId);
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             questions.Add(new Question
                             {
-                                Id = reader.GetInt32("Id"),
-                                Text = reader.GetString("Question"),
-                                CorrectAnswer = reader.GetString("CorrectAnswer"),
+                                Id = reader.GetInt32(0),
+                                Text = reader.GetString(1),
+                                CorrectAnswer = reader.GetString(2),
                                 IncorrectAnswers = new List<string>
-                            {
-                                reader.GetString("InCorrectAnswer"),
-                                reader.GetString("InCorrectAnswer2")
-                            }
-                            });
+                                {
+                                    //reader["InCorrectAnswer"] != DBNull.Value ? reader["InCorrectAnswer"].ToString() : "",
+                                    //reader["InCorrectAnswer2"] != DBNull.Value ? reader["InCorrectAnswer2"].ToString() : ""
+                                    reader.IsDBNull(3) ? "" : reader.GetString(3),
+                                    reader.IsDBNull(4) ? "" : reader.GetString(4)
+                                }
+                        });
                         }
                     }
                 }
             }
             return questions;
         }
-
 
         private void ShowQuestion()
         {

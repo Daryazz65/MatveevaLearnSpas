@@ -22,6 +22,7 @@ namespace MatveevaLearnSpas.View.Windows
     public partial class AuthorisationWindow : Window
     {
         private static MatveevaLearnSpasEntities _context = App.GetContext();
+
         public AuthorisationWindow()
         {
             InitializeComponent();

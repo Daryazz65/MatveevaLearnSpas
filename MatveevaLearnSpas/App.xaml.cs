@@ -15,6 +15,7 @@ namespace MatveevaLearnSpas
     /// </summary>
     public partial class App : Application
     {
+        public static User CurrentUser { get; set; }
         private static MatveevaLearnSpasEntities _context;
         public static MatveevaLearnSpasEntities GetContext()
         {
