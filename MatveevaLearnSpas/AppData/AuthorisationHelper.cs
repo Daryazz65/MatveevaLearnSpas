@@ -20,31 +20,21 @@ namespace MatveevaLearnSpas.AppData
         /// <returns></returns>
         public static bool Authorise(string login, string password)
         {
-            List<User> users = _context.Users.ToList();
-            if (login == string.Empty || password == string.Empty)
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBoxHelper.Error("Не все поля для ввода были заполнены.");
                 return false;
             }
+            selectedUser = _context.Users.FirstOrDefault(user => user.Login == login && user.Password == password);
+            if (selectedUser != null)
+            {
+                App.CurrentUser = selectedUser;
+                return true;
+            }
             else
             {
-                foreach (User user in users)
-                {
-                    if (user.Login == login && user.Password == password)
-                    {
-                        selectedUser = user;
-                        return true;
-                    }
-                }
-                if (selectedUser != null)
-                {
-                    return true;
-                }
-                else
-                {
-                    MessageBoxHelper.Error("Неправильно введен логин или пароль.");
-                    return false;
-                }
+                MessageBoxHelper.Error("Неправильно введен логин или пароль.");
+                return false;
             }
         }
     }

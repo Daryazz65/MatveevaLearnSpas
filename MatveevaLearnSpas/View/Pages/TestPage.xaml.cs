@@ -36,7 +36,7 @@ namespace MatveevaLearnSpas.View.Pages
         private List<Question> LoadQuestions(int moduleId)
         {
             List<Question> questions = new List<Question>();
-            string query = "SELECT Id, Question, CorrectAnswer, InCorrectAnswer, InCorrectAnswer2 FROM ControlQuestion WHERE IdSection = @moduleId";
+            string query = "SELECT Id, Question, CorrectAnswer, InCorrectAnswer, InCorrectAnswerTwo FROM ControlQuestion WHERE IdSection = @moduleId";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();

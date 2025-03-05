@@ -23,8 +23,8 @@ namespace MatveevaLearnSpas.View.Pages
     /// </summary>
     public partial class TestingPage : Page
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
         private static MatveevaLearnSpasEntities _context = App.GetContext();
-
         public TestingPage()
         {
             InitializeComponent();
@@ -32,15 +32,16 @@ namespace MatveevaLearnSpas.View.Pages
         }
         private void LoadTestingStatus()
         {
-            int userId = CurrentUser.Id; // ID текущего пользователя
+            int userId = App.CurrentUser?.Id ?? 0;
+            //int userId = CurrentUser.Id; // ID текущего пользователя
             bool module1Completed = false;
 
             string query = "SELECT COUNT(*) FROM Testing WHERE IdUser = @userId AND IdSection = 1 AND Status = 1";
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@userId", userId);
                     module1Completed = Convert.ToInt32(cmd.ExecuteScalar()) > 0;

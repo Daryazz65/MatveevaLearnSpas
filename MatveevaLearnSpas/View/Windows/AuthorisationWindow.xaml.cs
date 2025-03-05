@@ -22,7 +22,6 @@ namespace MatveevaLearnSpas.View.Windows
     public partial class AuthorisationWindow : Window
     {
         private static MatveevaLearnSpasEntities _context = App.GetContext();
-
         public AuthorisationWindow()
         {
             InitializeComponent();
@@ -30,17 +29,20 @@ namespace MatveevaLearnSpas.View.Windows
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
             AuthorisationHelper.Authorise(LoginTb.Text, PasswordTb.Password);
-            if (AuthorisationHelper.selectedUser.IdRole == 1)
+            if (AuthorisationHelper.selectedUser != null)
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                Close();
-            }
-            else
-            {
-                AdminWindow adminWindow = new AdminWindow();
-                adminWindow.Show();
-                Close();
+                App.CurrentUser = AuthorisationHelper.selectedUser; 
+                if (AuthorisationHelper.selectedUser.IdRole == 1)
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                }
+                else
+                {
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
+                }
+                Close(); 
             }
         }
         private void PasswordRecoveryBtn_Click(object sender, RoutedEventArgs e)
