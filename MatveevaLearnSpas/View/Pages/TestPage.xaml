@@ -10,18 +10,12 @@
 
     <Grid Background="#131F24">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
-
-            <!-- Текст вопроса -->
             <TextBlock x:Name="QuestionTextBlock" Text="Вопрос загружается..." 
                        FontSize="18" FontWeight="Bold" TextWrapping="Wrap" 
                        HorizontalAlignment="Center" Margin="0,20,0,20"/>
-
-            <!-- Кнопки с ответами -->
             <Button x:Name="AnswerBtn1" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
             <Button x:Name="AnswerBtn2" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
             <Button x:Name="AnswerBtn3" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
-
-            <!-- Кнопка "Далее" -->
             <Button x:Name="NextButton" Content="Далее" Click="NextButton_Click" 
                     FontSize="16" Margin="10" Visibility="Collapsed" />
         </StackPanel>

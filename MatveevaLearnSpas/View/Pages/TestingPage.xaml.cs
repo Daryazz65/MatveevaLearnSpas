@@ -33,11 +33,8 @@ namespace MatveevaLearnSpas.View.Pages
         private void LoadTestingStatus()
         {
             int userId = App.CurrentUser?.Id ?? 0;
-            //int userId = CurrentUser.Id; // ID текущего пользователя
             bool module1Completed = false;
-
             string query = "SELECT COUNT(*) FROM Testing WHERE IdUser = @userId AND IdSection = 1 AND Status = 1";
-
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
@@ -47,18 +44,15 @@ namespace MatveevaLearnSpas.View.Pages
                     module1Completed = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
                 }
             }
-
             ModulTwoBtn.IsEnabled = module1Completed;
         }
-
         private void ModulTwoBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TestPage(2)); // Открываем модуль 2
+            NavigationService.Navigate(new TestPage(2));
         }
-
         private void ModulOneBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TestPage(1)); // Открываем модуль 1
+            NavigationService.Navigate(new TestPage(1));
         }
     }
 }

@@ -54,12 +54,10 @@ namespace MatveevaLearnSpas.View.Pages
                                 CorrectAnswer = reader.GetString(2),
                                 IncorrectAnswers = new List<string>
                                 {
-                                    //reader["InCorrectAnswer"] != DBNull.Value ? reader["InCorrectAnswer"].ToString() : "",
-                                    //reader["InCorrectAnswer2"] != DBNull.Value ? reader["InCorrectAnswer2"].ToString() : ""
                                     reader.IsDBNull(3) ? "" : reader.GetString(3),
                                     reader.IsDBNull(4) ? "" : reader.GetString(4)
                                 }
-                        });
+                            });
                         }
                     }
                 }
