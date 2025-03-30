@@ -21,13 +21,18 @@ namespace MatveevaLearnSpas.View.Windows
     /// </summary>
     public partial class AuthorisationWindow : Window
     {
-        private static MatveevaLearnSpasEntities _context = App.GetContext();
+        private bool _isCaptchaVerified = false;
         public AuthorisationWindow()
         {
             InitializeComponent();
         }
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (!_isCaptchaVerified)
+            {
+                MessageBoxHelper.Warning("Пожалуйста, подтвердите, что вы не робот.");
+                return;
+            }
             AuthorisationHelper.Authorise(LoginTb.Text, PasswordTb.Password);
             if (AuthorisationHelper.selectedUser != null)
             {
@@ -48,6 +53,21 @@ namespace MatveevaLearnSpas.View.Windows
         private void PasswordRecoveryBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxHelper.Information("Обратитесь к системному администратору.");
+        }
+
+        private void CaptchaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CaptchaWindow captchaWindow = new CaptchaWindow();
+            if (captchaWindow.ShowDialog() == true && captchaWindow.IsVerified)
+            {
+                _isCaptchaVerified = true;
+                MessageBoxHelper.Information("Капча пройдена успешно.");
+            }
+            else
+            {
+                _isCaptchaVerified = false;
+                MessageBoxHelper.Information("Капча не пройдена.");
+            }
         }
     }
 }

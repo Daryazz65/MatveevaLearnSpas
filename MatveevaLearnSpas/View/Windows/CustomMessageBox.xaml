@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatveevaLearnSpas.View.Windows"
         mc:Ignorable="d"
-        Title="CustomMessageBox" Height="200" Width="400" WindowStartupLocation="CenterScreen">
+        Title="CustomMessageBox" Height="200" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"> 
     <Grid Background="#131F24">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

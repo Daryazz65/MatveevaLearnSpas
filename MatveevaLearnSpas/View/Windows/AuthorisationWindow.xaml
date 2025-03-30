@@ -10,9 +10,8 @@
     <Grid Background="#131F24">
         <Grid.RowDefinitions>
             <RowDefinition Height=".6*" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="20" />
             <RowDefinition Height="25" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
@@ -26,7 +25,7 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
-                <RowDefinition Height="20" />
+                <RowDefinition Height="10" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <TextBlock Text="Логин:" HorizontalAlignment="Right"/>
@@ -34,10 +33,13 @@
             <TextBlock Text="Пароль:" Grid.Row="2" HorizontalAlignment="Right"/>
             <PasswordBox Name="PasswordTb" Grid.Column="2" Grid.Row="2" HorizontalContentAlignment="Left" Foreground="White"/>
         </Grid>
-        <Button Grid.Row="4" Margin="270 0 270 0" Height="15" Background="Transparent"
+        <Button Grid.Row="3" Margin="270 0 270 10" Height="25" Background="Transparent"
                 BorderBrush="Transparent" Name="PasswordRecoveryBtn" Click="PasswordRecoveryBtn_Click">
             <TextBlock Text="Забыли пароль?" FontSize="15"/>
         </Button>
+        <Button Name="CaptchaBtn" Content="Я не робот" Grid.Row="5" 
+                VerticalAlignment="Top" Margin="270 0 270 0" Height="30" Click="CaptchaBtn_Click"
+                Background="Transparent" BorderBrush="Transparent"/>
         <Button Name="EnterBtn" Margin="120 0 115 0" Click="EnterBtn_Click" Content="Войти" Grid.Row="5"/>
     </Grid>
 </Window>
