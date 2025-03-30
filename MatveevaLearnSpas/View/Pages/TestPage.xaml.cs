@@ -99,10 +99,7 @@ namespace MatveevaLearnSpas.View.Pages
             {
                 MessageBox.Show($"Неверно! Правильный ответ: {correctAnswer}", "Результат", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            NextButton.Visibility = Visibility.Visible;
-            AnswerBtn1.IsEnabled = false;
-            AnswerBtn2.IsEnabled = false;
-            AnswerBtn3.IsEnabled = false;
+            NextButton_Click(sender, e);
         }
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {

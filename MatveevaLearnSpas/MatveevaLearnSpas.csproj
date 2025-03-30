@@ -140,6 +140,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Windows\CustomMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\CustomQuestionBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -175,6 +183,12 @@
     </Compile>
     <Compile Include="View\Windows\AuthorisationWindow.xaml.cs">
       <DependentUpon>AuthorisationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\CustomQuestionBox.xaml.cs">
+      <DependentUpon>CustomQuestionBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -266,7 +280,6 @@
     <Resource Include="Resources\Images\kristinka.png" />
     <Resource Include="Resources\Images\Mkad.png" />
     <Resource Include="Resources\Icons\Strelka.png" />
-    <Resource Include="Resources\Icons\BlueDog.png" />
     <Resource Include="Resources\Icons\ButtonResume.png" />
     <Resource Include="Resources\Icons\Close.png" />
     <Resource Include="Resources\Icons\DopMaterial.png" />

@@ -30,9 +30,9 @@
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <TextBlock Text="Логин:" HorizontalAlignment="Right"/>
-            <TextBox Name="LoginTb" Grid.Column="2"/>
+            <TextBox Name="LoginTb" Grid.Column="2" TextAlignment="Left"/>
             <TextBlock Text="Пароль:" Grid.Row="2" HorizontalAlignment="Right"/>
-            <PasswordBox Name="PasswordTb" Grid.Column="2" Grid.Row="2"/>
+            <PasswordBox Name="PasswordTb" Grid.Column="2" Grid.Row="2" HorizontalContentAlignment="Left" Foreground="White"/>
         </Grid>
         <Button Grid.Row="4" Margin="270 0 270 0" Height="15" Background="Transparent"
                 BorderBrush="Transparent" Name="PasswordRecoveryBtn" Click="PasswordRecoveryBtn_Click">

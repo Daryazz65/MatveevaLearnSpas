@@ -8,6 +8,6 @@
         <Setter Property="BorderBrush" Value="#026DD0" />
         <Setter Property="Background" Value="#131F24" />
         <Setter Property="Height" Value="50"/>
-        <Setter Property="Foreground" Value="#293B43"/>
+        <Setter Property="Foreground" Value="White"/>
     </Style>
 </ResourceDictionary>

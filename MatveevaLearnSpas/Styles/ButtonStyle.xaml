@@ -7,5 +7,17 @@
         <Setter Property="Height" Value="50" />
         <Setter Property="Foreground" Value="White" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Template">
+    <Setter.Value>
+        <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    CornerRadius="15">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+    </Setter.Value>
+</Setter>
     </Style>
 </ResourceDictionary>
