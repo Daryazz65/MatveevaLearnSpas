@@ -54,5 +54,90 @@ namespace MatveevaLearnSpas.View.Pages
         {
             NavigationService.Navigate(new TestPage(1));
         }
+
+        private void ModulThreeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul4Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul5Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul6Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul7Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul8Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul9Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul10Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul11Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul12Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul13Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul14Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul15Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul16Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul17Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul18Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modul19Btn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -82,7 +82,7 @@ namespace MatveevaLearnSpas.View.Pages
             }
             else
             {
-                MessageBox.Show($"Тест завершён! Ваш результат: {score} из {questions.Count}");
+                MessageBoxHelper.Information($"Тест завершён! Ваш результат: {score} из {questions.Count}");
                 NavigationService.GoBack();
             }
         }
@@ -92,12 +92,12 @@ namespace MatveevaLearnSpas.View.Pages
             var correctAnswer = questions[currentQuestionIndex].CorrectAnswer;
             if (clickedButton.Content.ToString() == correctAnswer)
             {
-                MessageBox.Show("Правильно!", "Результат", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBoxHelper.Information("Правильно!", "Результат");
                 score++;
             }
             else
             {
-                MessageBox.Show($"Неверно! Правильный ответ: {correctAnswer}", "Результат", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBoxHelper.Information($"Неверно! Правильный ответ: {correctAnswer}", "Результат");
             }
             NextButton_Click(sender, e);
         }
