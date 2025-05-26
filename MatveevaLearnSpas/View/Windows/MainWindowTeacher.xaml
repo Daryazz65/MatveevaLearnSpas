@@ -1,11 +1,11 @@
-﻿<Window x:Class="MatveevaLearnSpas.MainWindow"
+﻿<Window x:Class="MatveevaLearnSpas.View.Windows.MainWindowTeacher"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MatveevaLearnSpas"
-       mc:Ignorable="d"
-       Title="Главное окно сотрудника" Height="450" Width="700" 
+        xmlns:local="clr-namespace:MatveevaLearnSpas.View.Windows"
+        mc:Ignorable="d"
+        Title="Главное окно преподавателя" Height="450" Width="700" 
        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,16 +16,16 @@
             <Image Name="LogoImg" Grid.RowSpan="2" Source="/Resources/Icons/Logo.png" 
                    HorizontalAlignment="Left" Height="70"/>
             <Border Height="50"/>
-            <Button HorizontalAlignment="Left" Margin="50 0 0 0" Height="26" x:Name="TestingBtn" Click="TestingBtn_Click" Background="Transparent" BorderBrush="Transparent">
-                <TextBlock Text="Тестирование"/>
+            <Button HorizontalAlignment="Left" Margin="21 0 0 0" Height="26" x:Name="JournalBtn" Click="JournalBtn_Click"  Background="Transparent" BorderBrush="Transparent">
+                <TextBlock Text="Добавление лекций" />
             </Button>
             <Border Height="17"/>
-            <Button HorizontalAlignment="Left" Margin="50 0 0 0" Height="26" x:Name="MaterialBtn" Click="MaterialBtn_Click"  Background="Transparent" BorderBrush="Transparent">
-                <TextBlock Text="Доп. материал"/>
+            <Button HorizontalAlignment="Left" Margin="20 0 0 0" Height="26" x:Name="EmployeeBtn" Click="EmployeeBtn_Click"  Background="Transparent" BorderBrush="Transparent" >
+                <TextBlock Text="Сотрудники" />
             </Button>
             <Border Height="17"/>
-            <Button HorizontalAlignment="Left" Margin="50 0 0 0" Height="26" x:Name="ProfileBtn" Click="ProfileBtn_Click"  Background="Transparent" BorderBrush="Transparent">
-                <TextBlock Text="Профиль"/>
+            <Button HorizontalAlignment="Left" Margin="20 0 0 0" Height="26" x:Name="DeleteBtn" Click="DeleteBtn_Click"  Background="Transparent" BorderBrush="Transparent" >
+                <TextBlock Text="Удаление лекций" />
             </Button>
             <Border Height="120"/>
             <Button Content="Выйти  из аккаунта" Margin="10" 
@@ -36,13 +36,7 @@
                 <ColumnDefinition Width="50" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Image Source="/Resources/Icons/Obychenie.png" Height="30" Margin="1 0 0 145"/>
-            <Border Height="60"/>
-            <Image Source="/Resources/Icons/DopMaterial.png" Height="30" Margin="1 0 0 60"/>
-            <Border Height="60"/>
-            <Image Source="/Resources/Icons/Profil.png" Height="30" Margin="1 0 0 -25"/>
-
         </Grid>
-        <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        <Frame Name="MainFrameTeacher" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

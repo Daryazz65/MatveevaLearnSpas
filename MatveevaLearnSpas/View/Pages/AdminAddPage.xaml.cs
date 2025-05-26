@@ -85,7 +85,7 @@ namespace MatveevaLearnSpas.View.Pages
         {
             if (_selectedUserId == 0)
             {
-                MessageBox.Show("Выберите пользователя для редактирования.");
+                MessageBoxHelper.Error("Выберите пользователя для редактирования.");
                 return;
             }
             string newFullName = txtFullName.Text;
@@ -113,12 +113,12 @@ namespace MatveevaLearnSpas.View.Pages
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Данные обновлены!");
+                        MessageBoxHelper.Information("Данные обновлены!");
                         LoadUsers();
                     }
                     else
                     {
-                        MessageBox.Show("Ошибка обновления.");
+                        MessageBoxHelper.Error("Ошибка обновления.");
                     }
                 }
             }

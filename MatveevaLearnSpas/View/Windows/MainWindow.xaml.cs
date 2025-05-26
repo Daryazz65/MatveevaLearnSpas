@@ -46,5 +46,11 @@ namespace MatveevaLearnSpas
             authorisationWindow.Show();
             Close();
         }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ProfilePage profilePage = new ProfilePage();
+            MainFrame.Navigate(profilePage);
+        }
     }
 }

@@ -38,5 +38,17 @@ namespace MatveevaLearnSpas.View.Pages
             MkadPage mkadPage = new MkadPage();
             AdditionalFrame.Navigate(mkadPage);
         }
+
+        private void SadovoeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            SadovoePage sadovoePage = new SadovoePage();
+            AdditionalFrame.Navigate(sadovoePage);
+        }
+
+        private void AuzaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            YauzaPage yauzaPage = new YauzaPage();
+            AdditionalFrame.Navigate(yauzaPage);   
+        }
     }
 }

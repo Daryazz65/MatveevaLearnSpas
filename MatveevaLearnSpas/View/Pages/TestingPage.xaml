@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="480"
       Title="Тестирование">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel>
+        <StackPanel x:Name="ModulesStackPanel">
             <!-- Модуль 1 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="ModulOneBtn" Click="ModulOneBtn_Click"
@@ -171,7 +171,7 @@
                     <TextBlock Name="Modul18Tbl" Foreground="White" Text="Лекция 17" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 865345 -->
+            <!-- Модуль итогов -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul19Btn" Click="Modul19Btn_Click"
             Background="#131F24" BorderBrush="#293B43"

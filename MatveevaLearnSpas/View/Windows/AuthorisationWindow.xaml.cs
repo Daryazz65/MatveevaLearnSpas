@@ -28,28 +28,38 @@ namespace MatveevaLearnSpas.View.Windows
         }
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!_isCaptchaVerified)
+            string login = LoginTb.Text;
+            string password = PasswordTb.Password;
+
+            if (AuthorisationHelper.Authorise(login, password))
             {
-                MessageBoxHelper.Warning("Пожалуйста, подтвердите, что вы не робот.");
-                return;
-            }
-            AuthorisationHelper.Authorise(LoginTb.Text, PasswordTb.Password);
-            if (AuthorisationHelper.selectedUser != null)
-            {
-                App.CurrentUser = AuthorisationHelper.selectedUser; 
-                if (AuthorisationHelper.selectedUser.IdRole == 1)
+                User user = AuthorisationHelper.selectedUser;
+                // Проверяем роль пользователя
+                if (user.Role != null && user.Role.Name.Trim() == "Сис.админ")
                 {
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
+                    // Открываем окно/страницу для администратора
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
+                    this.Close();
+                }
+                else if (user.Role != null && user.Role.Name.Trim() == "Преподаватель")
+                {
+                    // Открываем окно/страницу для преподавателя
+                    MainWindowTeacher mainWindowTeacher = new MainWindowTeacher();
+                    mainWindowTeacher.MainFrameTeacher.Navigate(new View.Pages.JournalPage());
+                    mainWindowTeacher.Show();
+                    this.Close();
                 }
                 else
                 {
-                    AdminWindow adminWindow = new AdminWindow();
-                    adminWindow.Show();
+                    // Открываем окно/страницу для обычного сотрудника
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
                 }
-                Close(); 
             }
         }
+
         private void PasswordRecoveryBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxHelper.Information("Обратитесь к системному администратору.");

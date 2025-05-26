@@ -1,9 +1,12 @@
 ﻿using MatveevaLearnSpas.AppData;
+using MatveevaLearnSpas.Model;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using MatveevaLearnSpas.Model;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,12 +30,51 @@ namespace MatveevaLearnSpas.View.Pages
         private List<Question> questions;
         private int currentQuestionIndex = 0;
         private int score = 0;
+        private void UpdateOrAddTestingRecord(int moduleId, int score, int totalQuestions)
+        {
+            // Получаем текущего пользователя (например, через App.CurrentUser)
+            var user = App.CurrentUser;
+            if (user == null)
+                return;
+
+            using (var context = new MatveevaLearnSpasEntities())
+            {
+                // Пытаемся найти существующую запись
+                var testing = context.Testings.FirstOrDefault(t => t.IdUser == user.Id && t.IdSection == moduleId);
+
+                bool isPassed = totalQuestions > 0 && score * 100 / totalQuestions >= 60; // например, 60% правильных
+
+                if (testing != null)
+                {
+                    // Обновляем статус и дату
+                    testing.Status = isPassed;
+                    testing.DateTesting = DateTime.Now;
+                }
+                else
+                {
+                    // Добавляем новую запись
+                    var newTesting = new Testing
+                    {
+                        IdUser = user.Id,
+                        IdSection = moduleId,
+                        Status = isPassed,
+                        DateTesting = DateTime.Now
+                    };
+                    context.Testings.Add(newTesting);
+                }
+                context.SaveChanges();
+            }
+        }
+        private int moduleId;
         public TestPage(int moduleId)
         {
             InitializeComponent();
+            this.moduleId = moduleId;
             questions = LoadQuestions(moduleId);
             ShowQuestion();
+
         }
+        
         private List<Question> LoadQuestions(int moduleId)
         {
             List<Question> questions = new List<Question>();
@@ -82,8 +124,10 @@ namespace MatveevaLearnSpas.View.Pages
             }
             else
             {
+                UpdateOrAddTestingRecord(moduleId, score, questions.Count);
                 MessageBoxHelper.Information($"Тест завершён! Ваш результат: {score} из {questions.Count}");
                 NavigationService.GoBack();
+
             }
         }
         private void AnswerButton1_Click(object sender, RoutedEventArgs e)
@@ -109,5 +153,6 @@ namespace MatveevaLearnSpas.View.Pages
             AnswerBtn3.IsEnabled = true;
             ShowQuestion();
         }
+       
     }
 }

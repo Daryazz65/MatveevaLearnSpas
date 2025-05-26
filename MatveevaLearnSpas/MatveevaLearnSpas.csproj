@@ -80,6 +80,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Pages\DeletePage.xaml.cs">
+      <DependentUpon>DeletePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\EmployeePage.xaml.cs">
+      <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\JournalPage.xaml.cs">
+      <DependentUpon>JournalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\MainWindowTeacher.xaml.cs">
+      <DependentUpon>MainWindowTeacher.xaml</DependentUpon>
+    </Compile>
     <Page Include="Styles\ButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,7 +135,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\DeletePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\EmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\JournalPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\MkadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\SadovoePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\TestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\YauzaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,6 +203,7 @@
     <Compile Include="AppData\FrameHelper.cs" />
     <Compile Include="AppData\MessageBoxHelper.cs" />
     <Compile Include="AppData\Question.cs" />
+    <Compile Include="AppData\QuestionInput.cs" />
     <Compile Include="View\Pages\AdditionalMaterialPage.xaml.cs">
       <DependentUpon>AdditionalMaterialPage.xaml</DependentUpon>
     </Compile>
@@ -176,11 +216,17 @@
     <Compile Include="View\Pages\MkadPage.xaml.cs">
       <DependentUpon>MkadPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\SadovoePage.xaml.cs">
+      <DependentUpon>SadovoePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\TestingPage.xaml.cs">
       <DependentUpon>TestingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\YauzaPage.xaml.cs">
+      <DependentUpon>YauzaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
@@ -201,6 +247,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Windows\MainWindowTeacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ControlQuestion.cs">
@@ -283,6 +333,9 @@
       <DependentUpon>ModelLearn.edmx</DependentUpon>
       <LastGenOutput>ModelLearn.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Images\Yauza.png" />
+    <Resource Include="Resources\Images\Sadovoe.png" />
+    <Resource Include="Resources\Images\Untitled.png" />
     <Resource Include="Resources\Images\BylvarnoeKolco.png" />
     <Resource Include="Resources\Images\kristinka.png" />
     <Resource Include="Resources\Images\Mkad.png" />
