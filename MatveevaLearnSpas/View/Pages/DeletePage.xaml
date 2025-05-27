@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MatveevaLearnSpas.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="480"
-           Title="Удаление лекций">
+      Title="Удаление лекций">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

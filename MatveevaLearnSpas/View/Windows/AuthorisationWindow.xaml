@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatveevaLearnSpas.View.Windows"
         mc:Ignorable="d"
-       Title="Окно авторизации" Height="450" Width="700" 
+        Title="Окно авторизации" Height="450" Width="700" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Background="#131F24">
         <Grid.RowDefinitions>

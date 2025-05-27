@@ -22,6 +22,5 @@
             </DataGrid>
             <Button Content="Добавить лекцию" Click="AddLectureBtn_Click"  Width="150" Margin="0,10,0,0"/>
         </StackPanel>
-
     </Grid>
 </Page>

@@ -41,7 +41,6 @@
             <Image Source="/Resources/Icons/DopMaterial.png" Height="30" Margin="1 0 0 60"/>
             <Border Height="60"/>
             <Image Source="/Resources/Icons/Profil.png" Height="30" Margin="1 0 0 -25"/>
-
         </Grid>
         <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>

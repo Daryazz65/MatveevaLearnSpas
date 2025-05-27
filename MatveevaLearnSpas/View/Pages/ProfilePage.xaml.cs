@@ -23,13 +23,10 @@ namespace MatveevaLearnSpas.View.Pages
                 MessageBox.Show("Пользователь не найден.");
                 return;
             }
-
             FullNameTbl.Text = user.FullName;
             PostTbl.Text = $"Должность: {user.Post?.Name ?? "—"}";
             RoleTbl.Text = $"Роль: {user.Role?.Name ?? "—"}";
             DateRegTbl.Text = $"Дата регистрации: {user.DateRegistration.ToShortDateString()}";
-
-            // Фото
             if (!string.IsNullOrWhiteSpace(user.Photo))
             {
                 try
@@ -45,26 +42,18 @@ namespace MatveevaLearnSpas.View.Pages
             {
                 PhotoImg.Source = null;
             }
-
-            // Рейтинг
             var userTestings = _context.Testings.Where(t => t.IdUser == user.Id).ToList();
             int lecturesPassed = userTestings.Count(t => t.Status);
             int totalLectures = _context.Sections.Count(); // Всего лекций в системе
-
-            // Считаем вопросы и ошибки
             int totalQuestions = 0;
             int totalErrors = 0;
-
             foreach (var testing in userTestings)
             {
                 if (testing.Section == null) continue;
                 var questions = _context.ControlQuestions.Where(q => q.IdSection == testing.IdSection).ToList();
                 totalQuestions += questions.Count;
-                // Здесь можно добавить подсчёт ошибок, если есть такая информация
             }
-
             double avgPercent = totalLectures > 0 ? (lecturesPassed * 100.0 / totalLectures) : 0;
-
             QuestionsPassedTbl.Text = $"Пройдено вопросов: {totalQuestions}";
             ErrorsTbl.Text = $"Ошибок: {totalErrors}";
             AveragePercentTbl.Text = $"Средний процент прохождения: {avgPercent:F1}%";

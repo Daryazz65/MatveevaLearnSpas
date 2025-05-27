@@ -35,23 +35,17 @@ namespace MatveevaLearnSpas.View.Pages
         {
             if (LecturesDG.SelectedItem is MatveevaLearnSpas.Model.Section selectedSection)
             {
-                // Удаляем связанные вопросы
                 var controlQuestions = _context.ControlQuestions.Where(cq => cq.IdSection == selectedSection.Id).ToList();
                 foreach (var cq in controlQuestions)
                 {
                     _context.ControlQuestions.Remove(cq);
                 }
-
-                // Удаляем связанные тестирования
                 var testings = _context.Testings.Where(t => t.IdSection == selectedSection.Id).ToList();
                 foreach (var t in testings)
                 {
                     _context.Testings.Remove(t);
                 }
-
-                // Удаляем саму лекцию
                 _context.Sections.Remove(selectedSection);
-
                 _context.SaveChanges();
                 MessageBox.Show("Лекция удалена.");
                 LoadLectures();
@@ -61,7 +55,5 @@ namespace MatveevaLearnSpas.View.Pages
                 MessageBox.Show("Выберите лекцию для удаления.");
             }
         }
-
-
     }
 }

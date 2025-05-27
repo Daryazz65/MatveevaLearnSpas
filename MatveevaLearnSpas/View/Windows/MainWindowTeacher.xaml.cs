@@ -28,26 +28,22 @@ namespace MatveevaLearnSpas.View.Windows
             MainFrameTeacher.Navigate(journalPage);
             FrameHelper.selectedFrame = MainFrameTeacher;
         }
-
         private void GoOutBtn_Click(object sender, RoutedEventArgs e)
         {
             AuthorisationWindow authorisationWindow = new AuthorisationWindow();
             authorisationWindow.Show();
             Close();
         }
-
         private void JournalBtn_Click(object sender, RoutedEventArgs e)
         {
             JournalPage journalPage = new JournalPage();
             MainFrameTeacher.Navigate(journalPage);
         }
-
         private void EmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
             EmployeePage employeePage = new EmployeePage();
             MainFrameTeacher.Navigate(employeePage);
         }
-
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             DeletePage deletePage = new DeletePage();

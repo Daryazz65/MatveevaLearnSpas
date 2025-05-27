@@ -13,5 +13,4 @@ namespace MatveevaLearnSpas.AppData
         public string IncorrectAnswer1 { get; set; }
         public string IncorrectAnswer2 { get; set; }
     }
-
 }

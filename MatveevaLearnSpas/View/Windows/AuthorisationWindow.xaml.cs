@@ -30,21 +30,17 @@ namespace MatveevaLearnSpas.View.Windows
         {
             string login = LoginTb.Text;
             string password = PasswordTb.Password;
-
             if (AuthorisationHelper.Authorise(login, password))
             {
                 User user = AuthorisationHelper.selectedUser;
-                // Проверяем роль пользователя
                 if (user.Role != null && user.Role.Name.Trim() == "Сис.админ")
                 {
-                    // Открываем окно/страницу для администратора
                     AdminWindow adminWindow = new AdminWindow();
                     adminWindow.Show();
                     this.Close();
                 }
                 else if (user.Role != null && user.Role.Name.Trim() == "Преподаватель")
                 {
-                    // Открываем окно/страницу для преподавателя
                     MainWindowTeacher mainWindowTeacher = new MainWindowTeacher();
                     mainWindowTeacher.MainFrameTeacher.Navigate(new View.Pages.JournalPage());
                     mainWindowTeacher.Show();
@@ -52,19 +48,16 @@ namespace MatveevaLearnSpas.View.Windows
                 }
                 else
                 {
-                    // Открываем окно/страницу для обычного сотрудника
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
                     this.Close();
                 }
             }
         }
-
         private void PasswordRecoveryBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxHelper.Information("Обратитесь к системному администратору.");
         }
-
         private void CaptchaBtn_Click(object sender, RoutedEventArgs e)
         {
             CaptchaWindow captchaWindow = new CaptchaWindow();

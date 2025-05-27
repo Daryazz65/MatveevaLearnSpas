@@ -9,7 +9,6 @@
       Title="Тестирование">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel x:Name="ModulesStackPanel">
-            <!-- Модуль 1 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="ModulOneBtn" Click="ModulOneBtn_Click"
                         Background="#131F24" BorderBrush="#293B43"
@@ -18,7 +17,6 @@
                     <TextBlock Name="ModulOneTbl" Foreground="White" Text="ВВЕДЕНИЕ" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 1 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="ModulTwoBtn" Click="ModulTwoBtn_Click"
                         Background="#131F24" BorderBrush="#293B43"
@@ -27,7 +25,6 @@
                     <TextBlock Name="ModulTwoTbl" Foreground="White" Text="Лекция 1" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 2 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="ModulThreeBtn" Click="ModulThreeBtn_Click"
              Background="#131F24" BorderBrush="#293B43"
@@ -36,7 +33,6 @@
                     <TextBlock Name="ModulThreeTbl" Foreground="White" Text="Лекция 2" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 3 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul4Btn" Click="Modul4Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -45,7 +41,6 @@
                     <TextBlock Name="Modul4Tbl" Foreground="White" Text="Лекция 3" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 4 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul5Btn" Click="Modul5Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -54,7 +49,6 @@
                     <TextBlock Name="Modul5Tbl" Foreground="White" Text="Лекция 4" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 5 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul6Btn" Click="Modul6Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -63,7 +57,6 @@
                     <TextBlock Name="Modul6Tbl" Foreground="White" Text="Лекция 5" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 6 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul7Btn" Click="Modul7Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -72,7 +65,6 @@
                     <TextBlock Name="Modul7Tbl" Foreground="White" Text="Лекция 6" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 7 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul8Btn" Click="Modul8Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -81,7 +73,6 @@
                     <TextBlock Name="Modul8Tbl" Foreground="White" Text="Лекция 7" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 8 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul9Btn" Click="Modul9Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -90,7 +81,6 @@
                     <TextBlock Name="Modul9Tbl" Foreground="White" Text="Лекция 8" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 9 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul10Btn" Click="Modul10Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -99,7 +89,6 @@
                     <TextBlock Name="Modul10Tbl" Foreground="White" Text="Лекция 9" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 10 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul11Btn" Click="Modul11Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -108,7 +97,6 @@
                     <TextBlock Name="Modul11Tbl" Foreground="White" Text="Лекция 10" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 11 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul12Btn" Click="Modul12Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -117,7 +105,6 @@
                     <TextBlock Name="Modul12Tbl" Foreground="White" Text="Лекция 11" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 12 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul13Btn" Click="Modul13Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -126,7 +113,6 @@
                     <TextBlock Name="Modul13Tbl" Foreground="White" Text="Лекция 12" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 13 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul14Btn" Click="Modul14Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -135,7 +121,6 @@
                     <TextBlock Name="Modul14Tbl" Foreground="White" Text="Лекция 13" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 14 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul15Btn" Click="Modul15Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -144,7 +129,6 @@
                     <TextBlock Name="Modul15Tbl" Foreground="White" Text="Лекция 14" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 15 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul16Btn" Click="Modul16Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -153,7 +137,6 @@
                     <TextBlock Name="Modul16Tbl" Foreground="White" Text="Лекция 15" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 16 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul17Btn" Click="Modul17Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -162,7 +145,6 @@
                     <TextBlock Name="Modul17Tbl" Foreground="White" Text="Лекция 16" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль 17 -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul18Btn" Click="Modul18Btn_Click"
             Background="#131F24" BorderBrush="#293B43"
@@ -171,7 +153,6 @@
                     <TextBlock Name="Modul18Tbl" Foreground="White" Text="Лекция 17" FontSize="15"/>
                 </Button>
             </Grid>
-            <!-- Модуль итогов -->
             <Grid Background="#026DD0" Margin="5" Height="50">
                 <Button Name="Modul19Btn" Click="Modul19Btn_Click"
             Background="#131F24" BorderBrush="#293B43"

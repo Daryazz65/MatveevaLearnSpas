@@ -26,14 +26,12 @@ namespace MatveevaLearnSpas.View.Windows
             MessageTextBlock.Text = message;
             Title = title;
         }
-
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
             Result = true;
             this.DialogResult = true;
             this.Close();
         }
-
         private void NoButton_Click(object sender, RoutedEventArgs e)
         {
             Result = false;

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MatveevaLearnSpas.View.Windows"
         mc:Ignorable="d"
         Title="Главное окно преподавателя" Height="450" Width="700" 
-       WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>

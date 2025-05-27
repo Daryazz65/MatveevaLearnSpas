@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Тестирование">
-
     <Grid Background="#131F24">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
             <TextBlock x:Name="QuestionTextBlock" Text="Вопрос загружается..." 
