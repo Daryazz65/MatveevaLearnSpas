@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MatveevaLearnSpas.View.Pages"
       mc:Ignorable="d"
-      d:DesignHeight="450" d:DesignWidth="480"
+      d:DesignHeight="1080" d:DesignWidth="1620"
       Title="EmployeePage">
     <Grid>
         <DataGrid x:Name="TestingDG"

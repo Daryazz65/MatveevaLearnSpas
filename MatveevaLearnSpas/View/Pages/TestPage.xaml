@@ -5,18 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MatveevaLearnSpas.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1620"
       Title="Тестирование">
     <Grid Background="#131F24">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="900">
             <TextBlock x:Name="QuestionTextBlock" Text="Вопрос загружается..." 
-                       FontSize="18" FontWeight="Bold" TextWrapping="Wrap" 
-                       HorizontalAlignment="Center" Margin="0,20,0,20"/>
-            <Button x:Name="AnswerBtn1" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
-            <Button x:Name="AnswerBtn2" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
-            <Button x:Name="AnswerBtn3" Click="AnswerButton1_Click"  FontSize="16" Margin="5"/>
-            <Button x:Name="NextButton" Content="Далее" Click="NextButton_Click" 
-                    FontSize="16" Margin="10" Visibility="Collapsed" />
+                       FontWeight="Bold" TextWrapping="Wrap" Foreground="White"
+                       HorizontalAlignment="Center" Margin="0,20,0,30"/>
+            <Button x:Name="AnswerBtn1" Click="AnswerButton1_Click" Margin="5"/>
+            <Button x:Name="AnswerBtn2" Click="AnswerButton1_Click" Margin="5"/>
+            <Button x:Name="AnswerBtn3" Click="AnswerButton1_Click" Margin="5"/>
         </StackPanel>
     </Grid>
 </Page>

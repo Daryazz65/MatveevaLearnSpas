@@ -24,7 +24,7 @@ namespace MatveevaLearnSpas.Model
         public string FullName { get; set; }
         public int IdRole { get; set; }
         public int IdPost { get; set; }
-        public string Photo { get; set; }
+        public byte[] Photo { get; set; }
         public System.DateTime DateRegistration { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }

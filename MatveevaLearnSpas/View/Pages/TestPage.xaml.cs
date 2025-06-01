@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
-using MatveevaLearnSpas.Model;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -111,7 +110,6 @@ namespace MatveevaLearnSpas.View.Pages
                 AnswerBtn1.Visibility = Visibility.Visible;
                 AnswerBtn2.Visibility = Visibility.Visible;
                 AnswerBtn3.Visibility = Visibility.Visible;
-                NextButton.Visibility = Visibility.Collapsed;
             }
             else
             {

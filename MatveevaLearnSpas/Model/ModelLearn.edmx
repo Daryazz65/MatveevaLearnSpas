@@ -65,7 +65,7 @@
           <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="IdRole" Type="int" Nullable="false" />
           <Property Name="IdPost" Type="int" Nullable="false" />
-          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="Photo" Type="varbinary(max)" />
           <Property Name="DateRegistration" Type="date" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="15" Nullable="false" />
@@ -230,7 +230,7 @@
           <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IdRole" Type="Int32" Nullable="false" />
           <Property Name="IdPost" Type="Int32" Nullable="false" />
-          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="DateRegistration" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Login" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />

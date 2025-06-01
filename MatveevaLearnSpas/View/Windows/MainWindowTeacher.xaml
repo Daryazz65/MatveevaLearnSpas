@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatveevaLearnSpas.View.Windows"
         mc:Ignorable="d"
-        Title="Главное окно преподавателя" Height="450" Width="700" 
-        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
+        Title="Главное окно преподавателя" Height="1080" Width="1820" 
+        WindowStartupLocation="CenterScreen" Background="#131F24">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <StackPanel Background="#293B43">
@@ -27,9 +27,9 @@
             <Button HorizontalAlignment="Left" Margin="20 0 0 0" Height="26" x:Name="DeleteBtn" Click="DeleteBtn_Click"  Background="Transparent" BorderBrush="Transparent" >
                 <TextBlock Text="Удаление лекций" />
             </Button>
-            <Border Height="120"/>
+            <Border Height="730"/>
             <Button Content="Выйти  из аккаунта" Margin="10" 
-                    Height="35" Name="GoOutBtn" Click="GoOutBtn_Click"/>
+                    Height="45" Name="GoOutBtn" Click="GoOutBtn_Click"/>
         </StackPanel>
         <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>

@@ -5,32 +5,37 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MatveevaLearnSpas.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="480"
+      d:DesignHeight="1080" d:DesignWidth="1620"
       Title="Профиль">
     <Grid Margin="30">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="500"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
+            <RowDefinition Height="500" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Border Grid.Column="1" Grid.Row="1" Width="150" Height="190" BorderBrush="#026DD0" BorderThickness="2" CornerRadius="10">
+        <Border Grid.Column="1" Grid.RowSpan="2" Width="550" Height="650" BorderBrush="#026DD0" BorderThickness="2" CornerRadius="10" Margin="360 -300 0 0">
             <Image x:Name="PhotoImg" Stretch="UniformToFill"/>
         </Border>
+        <Button Name="AddBtn" Click="AddBtn_Click"  Margin="100 -50 0 0" Grid.Column="1" Grid.Row="1" Width="240" Content="Добавить"/>
+        <Button Name="DeleteBtn" Click="DeleteBtn_Click" Margin="620 -50 0 0" Grid.Column="1" Grid.Row="1" Width="240" Content="Удалить"/>
         <StackPanel Margin="5" Grid.ColumnSpan="2">
-            <TextBlock x:Name="FullNameTbl" FontSize="20" FontWeight="Bold" Margin="0 0 0 10" HorizontalAlignment="Left" TextWrapping="Wrap"/>
-            <TextBlock x:Name="PostTbl" FontSize="12" Margin="0 0 0 5" HorizontalAlignment="Left"/>
-            <TextBlock x:Name="RoleTbl" FontSize="12" Margin="0 0 0 5" HorizontalAlignment="Left"/>
-            <TextBlock x:Name="DateRegTbl" FontSize="12" Margin="0 0 0 5" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="FullNameTbl" FontSize="30" FontWeight="Bold" Margin="0 0 0 10" HorizontalAlignment="Left" TextWrapping="Wrap" Foreground="White"/>
+            <TextBlock x:Name="PostTbl" FontSize="20" Margin="0 0 0 5" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock x:Name="RoleTbl" FontSize="20" Margin="0 0 0 5" HorizontalAlignment="Left" Foreground="White"/>
+            <TextBlock x:Name="DateRegTbl" FontSize="20" Margin="0 0 0 5" HorizontalAlignment="Left" Foreground="White"/>
         </StackPanel>
-        <GroupBox Header="Рейтинг" Margin="0 -10 0 0" Grid.Row="1" Height="205">
+        <GroupBox Header="Рейтинг" Margin="0 -600 0 0" Grid.Row="1" Height="300" Foreground="White">
             <StackPanel>
-                <TextBlock HorizontalAlignment="Left" x:Name="QuestionsPassedTbl" FontSize="12" Margin="5"/>
-                <TextBlock HorizontalAlignment="Left" x:Name="ErrorsTbl" FontSize="12" Margin="5"/>
-                <TextBlock HorizontalAlignment="Left" x:Name="AveragePercentTbl" FontSize="12" Margin="5" TextWrapping="Wrap"/>
-                <TextBlock HorizontalAlignment="Left" x:Name="LecturesPassedTbl" FontSize="12" Margin="5"/>
+                <TextBlock HorizontalAlignment="Left" x:Name="QuestionsPassedTbl" FontSize="20" Margin="5"/>
+                <Border Height="20"/>
+                <TextBlock HorizontalAlignment="Left" x:Name="ErrorsTbl" FontSize="20" Margin="5"/>
+                <Border Height="20"/>
+                <TextBlock HorizontalAlignment="Left" x:Name="AveragePercentTbl" FontSize="20" Margin="5" TextWrapping="Wrap"/>
+                <Border Height="20"/>
+                <TextBlock HorizontalAlignment="Left" x:Name="LecturesPassedTbl" FontSize="20" Margin="5"/>
             </StackPanel>
         </GroupBox>
     </Grid>

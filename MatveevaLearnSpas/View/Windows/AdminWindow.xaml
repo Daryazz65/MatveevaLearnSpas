@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatveevaLearnSpas.View.Windows"
         mc:Ignorable="d"
-        Title="Окно системного администрирования" Height="600" Width="1020" 
-       WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
+        Title="Окно системного администрирования" Height="1080" Width="1820" 
+       WindowStartupLocation="CenterScreen"  Background="#131F24">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <StackPanel Background="#293B43">
             <Image Name="LogoImg" Grid.RowSpan="2" Source="/Resources/Icons/Logo.png" 
                    HorizontalAlignment="Left" Height="70"/>
-            <Border Height="400"/>
+            <Border Height="900"/>
             <Button Content="Выйти  из аккаунта" Margin="10" 
-                    Height="35" Name="GoOutBtn" Click="GoOutBtn_Click"/>
+                    Height="45" Name="GoOutBtn" Click="GoOutBtn_Click"/>
         </StackPanel>
         <Frame Name="AdminFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>

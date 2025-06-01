@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatveevaLearnSpas"
        mc:Ignorable="d"
-       Title="Главное окно сотрудника" Height="450" Width="700" 
-       WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#131F24">
+       Title="Главное окно сотрудника" Height="1080" Width="1820" 
+       WindowStartupLocation="CenterScreen" Background="#131F24">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <StackPanel Background="#293B43">
@@ -17,7 +17,7 @@
                    HorizontalAlignment="Left" Height="70"/>
             <Border Height="50"/>
             <Button HorizontalAlignment="Left" Margin="50 0 0 0" Height="26" x:Name="TestingBtn" Click="TestingBtn_Click" Background="Transparent" BorderBrush="Transparent">
-                <TextBlock Text="Тестирование"/>
+                <TextBlock Text="Тестирование" />
             </Button>
             <Border Height="17"/>
             <Button HorizontalAlignment="Left" Margin="50 0 0 0" Height="26" x:Name="MaterialBtn" Click="MaterialBtn_Click"  Background="Transparent" BorderBrush="Transparent">
@@ -27,21 +27,10 @@
             <Button HorizontalAlignment="Left" Margin="50 0 0 0" Height="26" x:Name="ProfileBtn" Click="ProfileBtn_Click"  Background="Transparent" BorderBrush="Transparent">
                 <TextBlock Text="Профиль"/>
             </Button>
-            <Border Height="120"/>
-            <Button Content="Выйти  из аккаунта" Margin="10" 
-                    Height="35" Name="GoOutBtn" Click="GoOutBtn_Click"/>
+            <Border Height="730"/>
+            <Button Content="Выйти  из аккаунта" Margin="10"
+                    Height="45" Name="GoOutBtn" Click="GoOutBtn_Click"/>
         </StackPanel>
-        <Grid Grid.Column="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50" />
-                <ColumnDefinition Width="1*" />
-            </Grid.ColumnDefinitions>
-            <Image Source="/Resources/Icons/Obychenie.png" Height="30" Margin="1 0 0 145"/>
-            <Border Height="60"/>
-            <Image Source="/Resources/Icons/DopMaterial.png" Height="30" Margin="1 0 0 60"/>
-            <Border Height="60"/>
-            <Image Source="/Resources/Icons/Profil.png" Height="30" Margin="1 0 0 -25"/>
-        </Grid>
         <Frame Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
