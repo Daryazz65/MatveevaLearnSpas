@@ -7,7 +7,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using Microsoft.Win32;
 
 namespace MatveevaLearnSpas.View.Pages
 {
@@ -136,7 +135,5 @@ namespace MatveevaLearnSpas.View.Pages
                 _selectedUserId = selectedUser.Id;
             }
         }
-
-       
     }
 }

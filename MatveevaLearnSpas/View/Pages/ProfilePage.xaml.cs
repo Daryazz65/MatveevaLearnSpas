@@ -22,20 +22,16 @@ namespace MatveevaLearnSpas.View.Pages
         }
         private void LoadProfile()
         {
-
             var user = App.CurrentUser;
             if (user == null)
             {
                 MessageBoxHelper.Error("Пользователь не найден. Повторите вход в систему.");
                 return;
             }
-
             SetProfileImage(user.Photo);
-
             FullNameTbl.Text = user.FullName;
             RoleTbl.Text = user.Role?.Name;
             PostTbl.Text = user.Post?.Name;
-
             var userTestings = _context.Testings.Where(t => t.IdUser == user.Id).ToList();
             int lecturesPassed = userTestings.Count(t => t.Status);
             int totalLectures = _context.Sections.Count();
@@ -53,8 +49,6 @@ namespace MatveevaLearnSpas.View.Pages
             AveragePercentTbl.Text = $"Средний процент прохождения: {avgPercent:F1}%";
             LecturesPassedTbl.Text = $"Пройдено лекций: {lecturesPassed} из {totalLectures}";
         }
-
-
         private void SetProfileImage(byte[] photoBytes)
         {
             if (photoBytes != null && photoBytes.Length > 0)
@@ -75,8 +69,6 @@ namespace MatveevaLearnSpas.View.Pages
                 PhotoImg.Source = null;
             }
         }
-
-
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             var user = App.CurrentUser;
@@ -103,7 +95,6 @@ namespace MatveevaLearnSpas.View.Pages
                 return false;
             }
         }
-
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog
@@ -117,7 +108,6 @@ namespace MatveevaLearnSpas.View.Pages
                     MessageBoxHelper.Error("Выбранный файл не является корректным изображением.");
                     return;
                 }
-
                 var user = App.CurrentUser;
                 if (user != null)
                 {
@@ -128,8 +118,6 @@ namespace MatveevaLearnSpas.View.Pages
                 }
             }
         }
-
-
         private void LoadProfilePhoto()
         {
             if (!string.IsNullOrEmpty(_photoPath) && File.Exists(_photoPath))
